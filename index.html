@@ -1,0 +1,43 @@
+<button onclick="bt1()">1</button>
+<button onclick="bt2()">2</button>
+<button>3</button>
+<button>4</button>
+<button>5</button>
+<button>6</button>
+<button>7</button>
+<button>8</button>
+<button>9</button>
+<button>0</button>
+<button>-</button>
+<button onclick="btSoma()">+</button>
+<button>*</button>
+<button>/</button>
+<button onclick="btResultado()">=</button>
+<div id="tela"></div>
+
+<script>
+
+function bt1(){
+    let val = document.getElementById('tela').innerHTML
+    document.getElementById('tela').innerHTML = val + '' + 1
+}
+function bt2(){
+    let val = document.getElementById('tela').innerHTML
+    document.getElementById('tela').innerHTML = val + '' + 2
+}
+function btSoma(){
+    let val = document.getElementById('tela').innerHTML
+    document.getElementById('tela').innerHTML = val + '' + '+'
+}
+function btResultado(){
+    let val = document.getElementById('tela').innerHTML
+    soma(val)
+}
+
+function soma(value){
+    calculo = value.split('+')
+    console.log('o calculo', calculo)
+    document.getElementById('tela').innerHTML = +calculo[0] + +calculo[1]
+}
+
+</script>
